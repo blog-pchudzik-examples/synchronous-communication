@@ -14,6 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+    <dependency.version.feign>10.8</dependency.version.feign>
   </properties>
 
   <dependencies>
@@ -32,17 +33,17 @@
     <dependency>
       <groupId>io.github.openfeign</groupId>
       <artifactId>feign-core</artifactId>
-      <version>10.8</version>
+      <version>${dependency.version.feign}</version>
     </dependency>
     <dependency>
       <groupId>io.github.openfeign</groupId>
       <artifactId>feign-jaxrs2</artifactId>
-      <version>10.8</version>
+      <version>${dependency.version.feign}</version>
     </dependency>
     <dependency>
       <groupId>io.github.openfeign</groupId>
       <artifactId>feign-gson</artifactId>
-      <version>10.8</version>
+      <version>${dependency.version.feign}</version>
       <exclusions>
         <exclusion>
           <groupId>com.google.code.gson</groupId>
@@ -53,7 +54,12 @@
     <dependency>
       <groupId>io.github.openfeign</groupId>
       <artifactId>feign-slf4j</artifactId>
-      <version>10.8</version>
+      <version>${dependency.version.feign}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.openfeign</groupId>
+      <artifactId>feign-hystrix</artifactId>
+      <version>${dependency.version.feign}</version>
     </dependency>
     <dependency>
       <groupId>javax.ws.rs</groupId>
@@ -86,7 +92,16 @@
       <artifactId>resilience4j-retry</artifactId>
       <version>1.3.1</version>
     </dependency>
-
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-circuitbreaker</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-retrofit</artifactId>
+      <version>1.3.1</version>
+    </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
